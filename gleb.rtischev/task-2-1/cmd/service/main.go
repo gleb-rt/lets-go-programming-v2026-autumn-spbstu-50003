@@ -12,7 +12,7 @@ type temperature struct {
 func main() {
 	var (
 		departments, staff, degree int
-		operation                 string
+		operation                  string
 	)
 
 	if _, err := fmt.Scan(&departments); err != nil {
@@ -20,16 +20,17 @@ func main() {
 	}
 
 	for range departments {
-
 		temp := temperature{15, 30}
 
 		if _, err := fmt.Scan(&staff); err != nil {
 			return
 		}
+
 		for range staff {
 			if _, err := fmt.Scan(&operation, &degree); err != nil {
 				return
 			}
+
 			switch operation {
 			case ">=":
 				temp.min = max(degree, temp.min)
