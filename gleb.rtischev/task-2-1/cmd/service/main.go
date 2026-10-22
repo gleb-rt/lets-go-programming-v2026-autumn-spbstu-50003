@@ -22,6 +22,7 @@ func main() {
 
 	if _, err := fmt.Scan(&departments); err != nil {
 		fmt.Println("Invalid input for departments")
+
 		return
 	}
 
@@ -30,12 +31,14 @@ func main() {
 
 		if _, err := fmt.Scan(&staff); err != nil {
 			fmt.Println("Invalid input for staff")
+
 			return
 		}
 
 		for range staff {
 			if _, err := fmt.Scan(&operation, &degree); err != nil {
 				fmt.Println("Invalid input for operation/degree")
+
 				return
 			}
 
