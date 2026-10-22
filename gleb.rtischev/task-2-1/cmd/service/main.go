@@ -9,6 +9,11 @@ type temperature struct {
 	max int
 }
 
+const (
+	minTemp = 15
+	maxTemp = 30
+)
+
 func main() {
 	var (
 		departments, staff, degree int
@@ -16,18 +21,21 @@ func main() {
 	)
 
 	if _, err := fmt.Scan(&departments); err != nil {
+		fmt.Println("Invalid input for departments")
 		return
 	}
 
 	for range departments {
-		temp := temperature{15, 30}
+		temp := temperature{min: minTemp, max: maxTemp}
 
 		if _, err := fmt.Scan(&staff); err != nil {
+			fmt.Println("Invalid input for staff")
 			return
 		}
 
 		for range staff {
 			if _, err := fmt.Scan(&operation, &degree); err != nil {
+				fmt.Println("Invalid input for operation/degree")
 				return
 			}
 
