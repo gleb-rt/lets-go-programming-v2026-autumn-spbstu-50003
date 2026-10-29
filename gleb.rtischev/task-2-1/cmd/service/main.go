@@ -21,7 +21,7 @@ func main() {
 	)
 
 	if _, err := fmt.Scan(&departments); err != nil {
-		fmt.Println(fmt.Errorf("Invalid input for departments: %w", err))
+		fmt.Println(fmt.Errorf("invalid input for departments: %w", err))
 
 		return
 	}
@@ -30,14 +30,14 @@ func main() {
 		temp := temperature{min: minTemp, max: maxTemp}
 
 		if _, err := fmt.Scan(&staff); err != nil {
-			fmt.Println(fmt.Errorf("Invalid input for staff: %w", err))
+			fmt.Println(fmt.Errorf("invalid input for staff: %w", err))
 
 			return
 		}
 
 		for range staff {
 			if _, err := fmt.Scan(&operation, &degree); err != nil {
-				fmt.Println(fmt.Errorf("Invalid input for operation/degree: %w", err))
+				fmt.Println(fmt.Errorf("invalid input for operation/degree: %w", err))
 
 				return
 			}
